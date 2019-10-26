@@ -3028,6 +3028,8 @@ namespace QuanLyBanHang {
             
             private global::System.Data.DataColumn columnreport_customer_phone;
             
+            private global::System.Data.DataColumn columnreport_ordered_id;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ReportHoaDonBanHangDataTable() {
@@ -3223,6 +3225,14 @@ namespace QuanLyBanHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn report_ordered_idColumn {
+                get {
+                    return this.columnreport_ordered_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3278,7 +3288,8 @@ namespace QuanLyBanHang {
                         string report_order_detail_total, 
                         string report_order_sum_total, 
                         string report_company_bank_account, 
-                        string report_customer_phone) {
+                        string report_customer_phone, 
+                        string report_ordered_id) {
                 ReportHoaDonBanHangRow rowReportHoaDonBanHangRow = ((ReportHoaDonBanHangRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         report_ordered_date_day,
@@ -3300,7 +3311,8 @@ namespace QuanLyBanHang {
                         report_order_detail_total,
                         report_order_sum_total,
                         report_company_bank_account,
-                        report_customer_phone};
+                        report_customer_phone,
+                        report_ordered_id};
                 rowReportHoaDonBanHangRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReportHoaDonBanHangRow);
                 return rowReportHoaDonBanHangRow;
@@ -3343,6 +3355,7 @@ namespace QuanLyBanHang {
                 this.columnreport_order_sum_total = base.Columns["report_order_sum_total"];
                 this.columnreport_company_bank_account = base.Columns["report_company_bank_account"];
                 this.columnreport_customer_phone = base.Columns["report_customer_phone"];
+                this.columnreport_ordered_id = base.Columns["report_ordered_id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3388,6 +3401,8 @@ namespace QuanLyBanHang {
                 base.Columns.Add(this.columnreport_company_bank_account);
                 this.columnreport_customer_phone = new global::System.Data.DataColumn("report_customer_phone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnreport_customer_phone);
+                this.columnreport_ordered_id = new global::System.Data.DataColumn("report_ordered_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreport_ordered_id);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5675,6 +5690,23 @@ namespace QuanLyBanHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string report_ordered_id {
+                get {
+                    try {
+                        return ((string)(this[this.tableReportHoaDonBanHang.report_ordered_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'report_ordered_id\' in table \'ReportHoaDonBanHang\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableReportHoaDonBanHang.report_ordered_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isreport_ordered_date_dayNull() {
                 return this.IsNull(this.tableReportHoaDonBanHang.report_ordered_date_dayColumn);
             }
@@ -5911,6 +5943,18 @@ namespace QuanLyBanHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setreport_customer_phoneNull() {
                 this[this.tableReportHoaDonBanHang.report_customer_phoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isreport_ordered_idNull() {
+                return this.IsNull(this.tableReportHoaDonBanHang.report_ordered_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setreport_ordered_idNull() {
+                this[this.tableReportHoaDonBanHang.report_ordered_idColumn] = global::System.Convert.DBNull;
             }
         }
         
