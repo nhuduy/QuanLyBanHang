@@ -124,11 +124,11 @@ namespace QuanLyBanHang.Functions
         private void btnThem_Click(object sender, EventArgs e)
         {
             // Kiểm tra dữ liệu nhập
-            if (String.IsNullOrEmpty(last_nameTextBox.Text) || String.IsNullOrEmpty(first_nameTextBox.Text)
-              || String.IsNullOrEmpty(companyTextBox.Text) || String.IsNullOrEmpty(phoneTextBox.Text)
-              || String.IsNullOrEmpty(address1TextBox.Text) || String.IsNullOrEmpty(address2TextBox.Text)
-              || String.IsNullOrEmpty(cityTextBox.Text) || String.IsNullOrEmpty(stateTextBox.Text)
-              || String.IsNullOrEmpty(countryTextBox.Text))
+            if (String.IsNullOrEmpty(last_nameTextBox.Text) || String.IsNullOrEmpty(first_nameTextBox.Text) 
+              || String.IsNullOrEmpty(emailTextBox.Text) || String.IsNullOrEmpty(companyTextBox.Text) 
+              || String.IsNullOrEmpty(phoneTextBox.Text) || String.IsNullOrEmpty(address1TextBox.Text) 
+              || String.IsNullOrEmpty(address2TextBox.Text) || String.IsNullOrEmpty(cityTextBox.Text) 
+              || String.IsNullOrEmpty(stateTextBox.Text) || String.IsNullOrEmpty(countryTextBox.Text))
             {
                 MessageBox.Show("Vui lòng kiểm tra lại, dữ liệu nhập chưa đầy đủ!");
                 return;
@@ -152,7 +152,7 @@ namespace QuanLyBanHang.Functions
                         command.CommandType = CommandType.Text;
                         command.Parameters.AddWithValue("@last_name", last_nameTextBox.Text);
                         command.Parameters.AddWithValue("@first_name", first_nameTextBox.Text);
-                        command.Parameters.AddWithValue("@email", first_nameTextBox.Text);
+                        command.Parameters.AddWithValue("@email", emailTextBox.Text);
                         command.Parameters.AddWithValue("@company", companyTextBox.Text);
                         command.Parameters.AddWithValue("@phone", phoneTextBox.Text);
                         command.Parameters.AddWithValue("@address1", address1TextBox.Text);
@@ -207,12 +207,11 @@ namespace QuanLyBanHang.Functions
         private void btnSua_Click(object sender, EventArgs e)
         {
             // Kiểm tra dữ liệu nhập
-            if (String.IsNullOrEmpty(last_nameTextBox.Text) || String.IsNullOrEmpty(first_nameTextBox.Text) ||
-                    String.IsNullOrEmpty(emailTextBox.Text) || String.IsNullOrEmpty(companyTextBox.Text) ||
-                    String.IsNullOrEmpty(phoneTextBox.Text) || String.IsNullOrEmpty(address1TextBox.Text) ||
-                    String.IsNullOrEmpty(postal_codeTextBox.Text) || String.IsNullOrEmpty(address2TextBox.Text) ||
-                    String.IsNullOrEmpty(cityTextBox.Text) || String.IsNullOrEmpty(stateTextBox.Text) ||
-                    String.IsNullOrEmpty(countryTextBox.Text))
+            if (String.IsNullOrEmpty(last_nameTextBox.Text) || String.IsNullOrEmpty(first_nameTextBox.Text)
+              || String.IsNullOrEmpty(emailTextBox.Text) || String.IsNullOrEmpty(companyTextBox.Text)
+              || String.IsNullOrEmpty(phoneTextBox.Text) || String.IsNullOrEmpty(address1TextBox.Text)
+              || String.IsNullOrEmpty(address2TextBox.Text) || String.IsNullOrEmpty(cityTextBox.Text)
+              || String.IsNullOrEmpty(stateTextBox.Text) || String.IsNullOrEmpty(countryTextBox.Text))
             {
                 MessageBox.Show("Vui lòng kiểm tra lại dữ liệu nhập");
                 return;
