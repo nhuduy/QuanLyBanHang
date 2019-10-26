@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfig.Designer.cs">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,24 @@
     <Compile Include="Functions\FrmDanhMucKhachHang.Designer.cs">
       <DependentUpon>FrmDanhMucKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\FrmDanhMucNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions\FrmDanhMucNhanVien.Designer.cs">
+      <DependentUpon>FrmDanhMucNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\FrmDanhMucSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions\FrmDanhMucSanPham.Designer.cs">
+      <DependentUpon>FrmDanhMucSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\FrmDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions\FrmDatHang.Designer.cs">
+      <DependentUpon>FrmDatHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyBanHangDataSet.Designer.cs">
@@ -86,6 +110,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmConfig.resx">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +121,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Functions\FrmDanhMucKhachHang.resx">
       <DependentUpon>FrmDanhMucKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Functions\FrmDanhMucNhanVien.resx">
+      <DependentUpon>FrmDanhMucNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Functions\FrmDanhMucSanPham.resx">
+      <DependentUpon>FrmDanhMucSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Functions\FrmDatHang.resx">
+      <DependentUpon>FrmDatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -129,15 +165,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\QuanLyBanHang.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Data\QuanLyBanHang_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>QuanLyBanHang.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
+    <Folder Include="Data\" />
     <Folder Include="Reports\" />
     <Folder Include="Resources\" />
   </ItemGroup>

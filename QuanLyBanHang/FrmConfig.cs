@@ -27,9 +27,6 @@ namespace QuanLyBanHang
 
         private void FrmConfig_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quanLyBanHangDataSet.configs' table. You can move, or remove it, as needed.
-            this.configsTableAdapter.Fill(this.quanLyBanHangDataSet.configs);
-
         }
     }
 }

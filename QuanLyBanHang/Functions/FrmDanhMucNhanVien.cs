@@ -16,20 +16,5 @@ namespace QuanLyBanHang.Functions
         {
             InitializeComponent();
         }
-
-        private void employeesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.employeesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.quanLyBanHangDataSet);
-
-        }
-
-        private void FrmDanhMucNhanVien_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'quanLyBanHangDataSet.employees' table. You can move, or remove it, as needed.
-            this.employeesTableAdapter.Fill(this.quanLyBanHangDataSet.employees);
-
-        }
     }
 }

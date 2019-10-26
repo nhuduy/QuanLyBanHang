@@ -19,15 +19,19 @@ namespace QuanLyBanHang
 
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
-            if (txtTendangnhap.Text == "admin" && txtMatkhau.Text == "123456")
-            {
-                MessageBox.Show("Đăng nhập thành công");
+            // Lấy giá trị người dùng nhập vào 2 textbox
+            string tenTaiKhoan = txtTendangnhap.Text;
+            string matKhau = txtMatkhau.Text;
 
-                FrmMain toMain = new FrmMain();
+            // Kiểm tra đăng nhập
+            if (tenTaiKhoan == "admin" && matKhau == "123456")
+            {
+                MessageBox.Show("Bạn đã đăng nhập thành công!!!");
                 this.Hide();
 
-                toMain.ShowDialog();
-                this.Show();
+                // Tạo đối tượng và gọi hàm Show()
+                FrmMain frmMain = new FrmMain();
+                frmMain.ShowDialog();
             }
 
             else
