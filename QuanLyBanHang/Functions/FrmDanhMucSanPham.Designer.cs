@@ -50,7 +50,7 @@
             this.quantity_per_unitTextBox = new System.Windows.Forms.TextBox();
             this.discontinuedTextBox = new System.Windows.Forms.TextBox();
             this.categoryTextBox = new System.Windows.Forms.TextBox();
-            this.productsDataGridView = new System.Windows.Forms.DataGridView();
+            this.dgvSanPham = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,7 +84,7 @@
             reorder_levelLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.target_levelNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimum_reorder_quantityNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reorder_levelNumericUpDown)).BeginInit();
@@ -263,14 +263,14 @@
             this.categoryTextBox.Size = new System.Drawing.Size(216, 31);
             this.categoryTextBox.TabIndex = 22;
             // 
-            // productsDataGridView
+            // dgvSanPham
             // 
-            this.productsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.productsDataGridView.AutoGenerateColumns = false;
-            this.productsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSanPham.AutoGenerateColumns = false;
+            this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -283,13 +283,13 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12});
-            this.productsDataGridView.DataSource = this.productsBindingSource;
-            this.productsDataGridView.Location = new System.Drawing.Point(34, 290);
-            this.productsDataGridView.Name = "productsDataGridView";
-            this.productsDataGridView.RowHeadersWidth = 82;
-            this.productsDataGridView.RowTemplate.Height = 33;
-            this.productsDataGridView.Size = new System.Drawing.Size(1475, 449);
-            this.productsDataGridView.TabIndex = 23;
+            this.dgvSanPham.DataSource = this.productsBindingSource;
+            this.dgvSanPham.Location = new System.Drawing.Point(34, 290);
+            this.dgvSanPham.Name = "dgvSanPham";
+            this.dgvSanPham.RowHeadersWidth = 82;
+            this.dgvSanPham.RowTemplate.Height = 33;
+            this.dgvSanPham.Size = new System.Drawing.Size(1475, 449);
+            this.dgvSanPham.TabIndex = 23;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -397,6 +397,7 @@
             this.btnThoat.TabIndex = 37;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnLuu
             // 
@@ -407,6 +408,7 @@
             this.btnLuu.TabIndex = 38;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -417,6 +419,7 @@
             this.btnXoa.TabIndex = 39;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -427,6 +430,7 @@
             this.btnSua.TabIndex = 40;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -437,6 +441,7 @@
             this.btnThem.TabIndex = 41;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // target_levelNumericUpDown
             // 
@@ -478,7 +483,7 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.productsDataGridView);
+            this.Controls.Add(this.dgvSanPham);
             this.Controls.Add(categoryLabel);
             this.Controls.Add(this.categoryTextBox);
             this.Controls.Add(discontinuedLabel);
@@ -501,7 +506,7 @@
             this.Load += new System.EventHandler(this.FrmDanhMucSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.target_levelNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimum_reorder_quantityNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reorder_levelNumericUpDown)).EndInit();
@@ -522,7 +527,7 @@
         private System.Windows.Forms.TextBox quantity_per_unitTextBox;
         private System.Windows.Forms.TextBox discontinuedTextBox;
         private System.Windows.Forms.TextBox categoryTextBox;
-        private System.Windows.Forms.DataGridView productsDataGridView;
+        private System.Windows.Forms.DataGridView dgvSanPham;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

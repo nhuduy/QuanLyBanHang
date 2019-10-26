@@ -188,7 +188,7 @@ namespace QuanLyBanHang.Functions
                 // Lấy dữ liệu của dòng dữ liệu đang chọn
                 DataGridViewRow row = this.customersDataGridView.Rows[e.RowIndex];
 
-                // Binding vào các textbox tương ứng
+                //// Binding vào các textbox tương ứng
                 last_nameTextBox.Text = row.Cells["last_nameDataGridViewTextBoxColumn"].Value.ToString();
                 first_nameTextBox.Text = row.Cells["first_nameDataGridViewTextBoxColumn"].Value.ToString();
                 emailTextBox.Text = row.Cells["emailDataGridViewTextBoxColumn"].Value.ToString();
