@@ -21,5 +21,6 @@ namespace QuanLyBanHang.Functions
         {
             this.Close();
         }
+
     }
 }

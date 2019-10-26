@@ -17,16 +17,5 @@ namespace QuanLyBanHang
             InitializeComponent();
         }
 
-        private void configsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.configsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.quanLyBanHangDataSet);
-
-        }
-
-        private void FrmConfig_Load(object sender, EventArgs e)
-        {
-        }
     }
 }

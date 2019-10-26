@@ -162,6 +162,33 @@
             categoryLabel.TabIndex = 21;
             categoryLabel.Text = "category:";
             // 
+            // target_levelLabel
+            // 
+            target_levelLabel.AutoSize = true;
+            target_levelLabel.Location = new System.Drawing.Point(609, 104);
+            target_levelLabel.Name = "target_levelLabel";
+            target_levelLabel.Size = new System.Drawing.Size(124, 25);
+            target_levelLabel.TabIndex = 41;
+            target_levelLabel.Text = "target level:";
+            // 
+            // minimum_reorder_quantityLabel
+            // 
+            minimum_reorder_quantityLabel.AutoSize = true;
+            minimum_reorder_quantityLabel.Location = new System.Drawing.Point(473, 222);
+            minimum_reorder_quantityLabel.Name = "minimum_reorder_quantityLabel";
+            minimum_reorder_quantityLabel.Size = new System.Drawing.Size(260, 25);
+            minimum_reorder_quantityLabel.TabIndex = 42;
+            minimum_reorder_quantityLabel.Text = "minimum reorder quantity:";
+            // 
+            // reorder_levelLabel
+            // 
+            reorder_levelLabel.AutoSize = true;
+            reorder_levelLabel.Location = new System.Drawing.Point(595, 160);
+            reorder_levelLabel.Name = "reorder_levelLabel";
+            reorder_levelLabel.Size = new System.Drawing.Size(138, 25);
+            reorder_levelLabel.TabIndex = 43;
+            reorder_levelLabel.Text = "reorder level:";
+            // 
             // quanLyBanHangDataSet
             // 
             this.quanLyBanHangDataSet.DataSetName = "QuanLyBanHangDataSet";
@@ -238,6 +265,9 @@
             // 
             // productsDataGridView
             // 
+            this.productsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.productsDataGridView.AutoGenerateColumns = false;
             this.productsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.productsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -360,6 +390,7 @@
             // 
             // btnThoat
             // 
+            this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThoat.Location = new System.Drawing.Point(1348, 767);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(161, 51);
@@ -369,6 +400,7 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLuu.Location = new System.Drawing.Point(1153, 767);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(161, 51);
@@ -378,6 +410,7 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXoa.Location = new System.Drawing.Point(954, 767);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(161, 51);
@@ -387,6 +420,7 @@
             // 
             // btnSua
             // 
+            this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSua.Location = new System.Drawing.Point(753, 767);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(161, 51);
@@ -396,21 +430,13 @@
             // 
             // btnThem
             // 
+            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThem.Location = new System.Drawing.Point(557, 767);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(161, 51);
             this.btnThem.TabIndex = 41;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // target_levelLabel
-            // 
-            target_levelLabel.AutoSize = true;
-            target_levelLabel.Location = new System.Drawing.Point(609, 104);
-            target_levelLabel.Name = "target_levelLabel";
-            target_levelLabel.Size = new System.Drawing.Size(124, 25);
-            target_levelLabel.TabIndex = 41;
-            target_levelLabel.Text = "target level:";
             // 
             // target_levelNumericUpDown
             // 
@@ -420,15 +446,6 @@
             this.target_levelNumericUpDown.Size = new System.Drawing.Size(216, 31);
             this.target_levelNumericUpDown.TabIndex = 42;
             // 
-            // minimum_reorder_quantityLabel
-            // 
-            minimum_reorder_quantityLabel.AutoSize = true;
-            minimum_reorder_quantityLabel.Location = new System.Drawing.Point(473, 222);
-            minimum_reorder_quantityLabel.Name = "minimum_reorder_quantityLabel";
-            minimum_reorder_quantityLabel.Size = new System.Drawing.Size(260, 25);
-            minimum_reorder_quantityLabel.TabIndex = 42;
-            minimum_reorder_quantityLabel.Text = "minimum reorder quantity:";
-            // 
             // minimum_reorder_quantityNumericUpDown
             // 
             this.minimum_reorder_quantityNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productsBindingSource, "minimum_reorder_quantity", true));
@@ -436,15 +453,6 @@
             this.minimum_reorder_quantityNumericUpDown.Name = "minimum_reorder_quantityNumericUpDown";
             this.minimum_reorder_quantityNumericUpDown.Size = new System.Drawing.Size(216, 31);
             this.minimum_reorder_quantityNumericUpDown.TabIndex = 43;
-            // 
-            // reorder_levelLabel
-            // 
-            reorder_levelLabel.AutoSize = true;
-            reorder_levelLabel.Location = new System.Drawing.Point(595, 160);
-            reorder_levelLabel.Name = "reorder_levelLabel";
-            reorder_levelLabel.Size = new System.Drawing.Size(138, 25);
-            reorder_levelLabel.TabIndex = 43;
-            reorder_levelLabel.Text = "reorder level:";
             // 
             // reorder_levelNumericUpDown
             // 
@@ -489,7 +497,8 @@
             this.Controls.Add(this.product_codeTextBox);
             this.Name = "FrmDanhMucSanPham";
             this.Text = "FormDanhMucSanPham";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmDanhMucSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).EndInit();

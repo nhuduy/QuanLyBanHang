@@ -17,5 +17,9 @@ namespace QuanLyBanHang.Functions
             InitializeComponent();
         }
 
+        private void FrmDanhMucSanPham_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

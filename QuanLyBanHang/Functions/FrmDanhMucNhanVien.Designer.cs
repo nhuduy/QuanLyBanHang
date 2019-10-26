@@ -60,7 +60,7 @@
             this.address2TextBox = new System.Windows.Forms.TextBox();
             this.cityTextBox = new System.Windows.Forms.TextBox();
             this.countryTextBox = new System.Windows.Forms.TextBox();
-            this.dgvNhanVien = new System.Windows.Forms.DataGridView();
+            this.employeesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,7 +100,7 @@
             manager_idLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manager_idNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -230,6 +230,15 @@
             countryLabel.TabIndex = 29;
             countryLabel.Text = "country:";
             // 
+            // manager_idLabel
+            // 
+            manager_idLabel.AutoSize = true;
+            manager_idLabel.Location = new System.Drawing.Point(586, 223);
+            manager_idLabel.Name = "manager_idLabel";
+            manager_idLabel.Size = new System.Drawing.Size(125, 25);
+            manager_idLabel.TabIndex = 36;
+            manager_idLabel.Text = "manager id:";
+            // 
             // quanLyBanHangDataSet
             // 
             this.quanLyBanHangDataSet.DataSetName = "QuanLyBanHangDataSet";
@@ -352,11 +361,14 @@
             this.countryTextBox.Size = new System.Drawing.Size(266, 31);
             this.countryTextBox.TabIndex = 30;
             // 
-            // dgvNhanVien
+            // employeesDataGridView
             // 
-            this.dgvNhanVien.AutoGenerateColumns = false;
-            this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.employeesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.employeesDataGridView.AutoGenerateColumns = false;
+            this.employeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employeesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -373,13 +385,13 @@
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16});
-            this.dgvNhanVien.DataSource = this.employeesBindingSource;
-            this.dgvNhanVien.Location = new System.Drawing.Point(38, 338);
-            this.dgvNhanVien.Name = "dgvNhanVien";
-            this.dgvNhanVien.RowHeadersWidth = 82;
-            this.dgvNhanVien.RowTemplate.Height = 33;
-            this.dgvNhanVien.Size = new System.Drawing.Size(1445, 361);
-            this.dgvNhanVien.TabIndex = 31;
+            this.employeesDataGridView.DataSource = this.employeesBindingSource;
+            this.employeesDataGridView.Location = new System.Drawing.Point(38, 338);
+            this.employeesDataGridView.Name = "employeesDataGridView";
+            this.employeesDataGridView.RowHeadersWidth = 82;
+            this.employeesDataGridView.RowTemplate.Height = 33;
+            this.employeesDataGridView.Size = new System.Drawing.Size(1445, 361);
+            this.employeesDataGridView.TabIndex = 31;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -512,7 +524,8 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(1322, 718);
+            this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThoat.Location = new System.Drawing.Point(1313, 714);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(161, 51);
             this.btnThoat.TabIndex = 32;
@@ -521,7 +534,8 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(1127, 718);
+            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLuu.Location = new System.Drawing.Point(1118, 714);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(161, 51);
             this.btnLuu.TabIndex = 33;
@@ -530,7 +544,8 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(928, 718);
+            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXoa.Location = new System.Drawing.Point(919, 714);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(161, 51);
             this.btnXoa.TabIndex = 34;
@@ -539,7 +554,8 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(727, 718);
+            this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSua.Location = new System.Drawing.Point(718, 714);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(161, 51);
             this.btnSua.TabIndex = 35;
@@ -548,26 +564,18 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(531, 718);
+            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThem.Location = new System.Drawing.Point(522, 714);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(161, 51);
             this.btnThem.TabIndex = 36;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
-            // manager_idLabel
-            // 
-            manager_idLabel.AutoSize = true;
-            manager_idLabel.Location = new System.Drawing.Point(586, 229);
-            manager_idLabel.Name = "manager_idLabel";
-            manager_idLabel.Size = new System.Drawing.Size(125, 25);
-            manager_idLabel.TabIndex = 36;
-            manager_idLabel.Text = "manager id:";
-            // 
             // manager_idNumericUpDown
             // 
             this.manager_idNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.employeesBindingSource, "manager_id", true));
-            this.manager_idNumericUpDown.Location = new System.Drawing.Point(717, 229);
+            this.manager_idNumericUpDown.Location = new System.Drawing.Point(717, 223);
             this.manager_idNumericUpDown.Name = "manager_idNumericUpDown";
             this.manager_idNumericUpDown.Size = new System.Drawing.Size(120, 31);
             this.manager_idNumericUpDown.TabIndex = 37;
@@ -576,7 +584,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1519, 789);
+            this.ClientSize = new System.Drawing.Size(1527, 789);
             this.Controls.Add(manager_idLabel);
             this.Controls.Add(this.manager_idNumericUpDown);
             this.Controls.Add(this.btnThoat);
@@ -584,7 +592,7 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.dgvNhanVien);
+            this.Controls.Add(this.employeesDataGridView);
             this.Controls.Add(countryLabel);
             this.Controls.Add(this.countryTextBox);
             this.Controls.Add(cityLabel);
@@ -615,9 +623,11 @@
             this.Controls.Add(this.last_nameTextBox);
             this.Name = "FrmDanhMucNhanVien";
             this.Text = "FormDanhMucNhanVien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmDanhMucNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manager_idNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -642,7 +652,7 @@
         private System.Windows.Forms.TextBox address2TextBox;
         private System.Windows.Forms.TextBox cityTextBox;
         private System.Windows.Forms.TextBox countryTextBox;
-        private System.Windows.Forms.DataGridView dgvNhanVien;
+        private System.Windows.Forms.DataGridView employeesDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
