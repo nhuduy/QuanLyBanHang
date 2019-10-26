@@ -56,11 +56,6 @@ namespace QuanLyBanHang.Functions
                         // Đổ dữ liệu vào dataset
                         adapter.Fill(quanLyBanHangDataSet.customers);
 
-                        // Hiển thị dữ liệu
-                        employeesBindingSource.DataSource = null;
-                        employeesBindingSource.DataSource = quanLyBanHangDataSet.configs;
-                        //customersDataGridView.Refresh();
-                        //employeesBindingSource.Refresh();
 
                         // Ngắt kết nối đến Database Server
                         connection.Close();
@@ -72,6 +67,18 @@ namespace QuanLyBanHang.Functions
                     }
                 }
             }
+
+        }
+
+        private void employeesBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employeesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.employeesBindingSource.EndEdit();
 
         }
     }

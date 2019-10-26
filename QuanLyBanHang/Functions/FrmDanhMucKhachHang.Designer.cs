@@ -52,7 +52,6 @@
             this.cityTextBox = new System.Windows.Forms.TextBox();
             this.stateTextBox = new System.Windows.Forms.TextBox();
             this.countryTextBox = new System.Windows.Forms.TextBox();
-            this.postal_codeTextBox = new System.Windows.Forms.TextBox();
             this.customersDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +70,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.postal_codeTextBox = new System.Windows.Forms.TextBox();
             last_nameLabel = new System.Windows.Forms.Label();
             first_nameLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
@@ -180,10 +180,10 @@
             // postal_codeLabel
             // 
             postal_codeLabel.AutoSize = true;
-            postal_codeLabel.Location = new System.Drawing.Point(469, 230);
+            postal_codeLabel.Location = new System.Drawing.Point(470, 230);
             postal_codeLabel.Name = "postal_codeLabel";
             postal_codeLabel.Size = new System.Drawing.Size(129, 25);
-            postal_codeLabel.TabIndex = 21;
+            postal_codeLabel.TabIndex = 26;
             postal_codeLabel.Text = "postal code:";
             // 
             // quanLyBanHangDataSet
@@ -276,14 +276,6 @@
             this.countryTextBox.Size = new System.Drawing.Size(224, 31);
             this.countryTextBox.TabIndex = 20;
             // 
-            // postal_codeTextBox
-            // 
-            this.postal_codeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "postal_code", true));
-            this.postal_codeTextBox.Location = new System.Drawing.Point(605, 227);
-            this.postal_codeTextBox.Name = "postal_codeTextBox";
-            this.postal_codeTextBox.Size = new System.Drawing.Size(224, 31);
-            this.postal_codeTextBox.TabIndex = 22;
-            // 
             // customersDataGridView
             // 
             this.customersDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -309,8 +301,9 @@
             this.customersDataGridView.Name = "customersDataGridView";
             this.customersDataGridView.RowHeadersWidth = 82;
             this.customersDataGridView.RowTemplate.Height = 33;
-            this.customersDataGridView.Size = new System.Drawing.Size(1352, 367);
+            this.customersDataGridView.Size = new System.Drawing.Size(1352, 375);
             this.customersDataGridView.TabIndex = 23;
+            this.customersDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customersDataGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -412,47 +405,51 @@
             // btnThem
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.Location = new System.Drawing.Point(410, 688);
+            this.btnThem.Location = new System.Drawing.Point(410, 696);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(161, 51);
             this.btnThem.TabIndex = 24;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
             this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSua.Location = new System.Drawing.Point(605, 688);
+            this.btnSua.Location = new System.Drawing.Point(605, 696);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(161, 51);
             this.btnSua.TabIndex = 24;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoa.Location = new System.Drawing.Point(806, 688);
+            this.btnXoa.Location = new System.Drawing.Point(806, 696);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(161, 51);
             this.btnXoa.TabIndex = 24;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
             this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLuu.Location = new System.Drawing.Point(1004, 688);
+            this.btnLuu.Location = new System.Drawing.Point(1004, 696);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(161, 51);
             this.btnLuu.TabIndex = 24;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThoat
             // 
             this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThoat.Location = new System.Drawing.Point(1191, 688);
+            this.btnThoat.Location = new System.Drawing.Point(1191, 696);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(161, 51);
             this.btnThoat.TabIndex = 24;
@@ -460,19 +457,27 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // postal_codeTextBox
+            // 
+            this.postal_codeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "postal_code", true));
+            this.postal_codeTextBox.Location = new System.Drawing.Point(605, 227);
+            this.postal_codeTextBox.Name = "postal_codeTextBox";
+            this.postal_codeTextBox.Size = new System.Drawing.Size(224, 31);
+            this.postal_codeTextBox.TabIndex = 27;
+            // 
             // FrmDanhMucKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1388, 751);
+            this.ClientSize = new System.Drawing.Size(1388, 759);
+            this.Controls.Add(postal_codeLabel);
+            this.Controls.Add(this.postal_codeTextBox);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.customersDataGridView);
-            this.Controls.Add(postal_codeLabel);
-            this.Controls.Add(this.postal_codeTextBox);
             this.Controls.Add(countryLabel);
             this.Controls.Add(this.countryTextBox);
             this.Controls.Add(stateLabel);
@@ -496,6 +501,7 @@
             this.Name = "FrmDanhMucKhachHang";
             this.Text = "FrmDanhMucKhachHang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmDanhMucKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersDataGridView)).EndInit();
@@ -518,7 +524,6 @@
         private System.Windows.Forms.TextBox cityTextBox;
         private System.Windows.Forms.TextBox stateTextBox;
         private System.Windows.Forms.TextBox countryTextBox;
-        private System.Windows.Forms.TextBox postal_codeTextBox;
         private System.Windows.Forms.DataGridView customersDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -537,5 +542,6 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.TextBox postal_codeTextBox;
     }
 }
